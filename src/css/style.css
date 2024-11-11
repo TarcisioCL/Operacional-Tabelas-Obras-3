@@ -12,7 +12,8 @@ body{
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    min-height: 100vh;
+    overflow: hidden;  
+    height: 100vh;
 }
 
 header{
@@ -30,15 +31,20 @@ header h1{
     color: #336b58;
 }
 
+header i{
+    color: #1b5205;
+}
+
 .header-logo{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .header-logo img{
     height: 22px;
-    padding: 0 20px;
 }
 
 .header-nav{
@@ -46,13 +52,14 @@ header h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
 
 .header-nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .header-nav li{
@@ -64,8 +71,14 @@ header h1{
     color: #336b58;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 0 10px;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+#nav-operacional:hover{
+    color: rgb(255, 238, 0);
+    background-color: rgba(163, 30, 30, 0.5);
+    border-radius: 12px;
 }
 
 #nav-obras:hover{
@@ -83,12 +96,6 @@ header h1{
 #nav-energia:hover{
     color: rgb(238, 45, 45);
     background-color: rgba(82, 76, 76, 0.5);
-    border-radius: 12px;
-}
-
-#nav-operacional:hover{
-    color: rgb(255, 238, 0);
-    background-color: rgba(163, 30, 30, 0.5);
     border-radius: 12px;
 }
 
@@ -125,33 +132,28 @@ header h1{
     display: none;
 }
 
-#icon_settings i,
-#icon_login i,
-#icon_menutoggle i{
-    color: #1b5205;
-}
-
 main{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: calc(100% - 50px);
+    position: relative;
 }
 
-dialog {
-    position: absolute; 
-    top: 50%;           
-    left: 50%;        
-    transform: translate(-50%, -50%); 
-    padding: 20px;
-    color: #336b58;
-    border: none;
-    border-radius: 8px;
+.main-section{
+    width: 300px;
+    height: calc(100% - 50px);
     background-color: rgba(199, 193, 193, 0.726);
+    border-radius: 12px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.4);
+.main-hidden{
+    opacity:0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
 }
 
 @media (max-width: 988px) {
