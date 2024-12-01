@@ -17,6 +17,17 @@ document.querySelectorAll(".toggle-link").forEach(link => {
     });
 });
 
+document.getElementById("icon_menutoggle").addEventListener("click", () => {
+    const nav = document.querySelector(".header-nav");
+
+    // Verificar e alternar o display
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "block";
+    } else {
+        nav.style.display = "none";
+    }
+});
+
 
 
 
