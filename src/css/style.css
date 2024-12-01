@@ -14,10 +14,11 @@ body{
     background-repeat: no-repeat;
     overflow: hidden;  
     height: 100vh;
+    color: #336b58;
 }
 
 header{
-    background-color: rgba(199, 193, 193, 0.726);
+    background-color: rgba(199, 193, 193, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +29,6 @@ header{
 
 header h1{
     font-size: 1rem;
-    color: #336b58;
 }
 
 header i{
@@ -135,25 +135,37 @@ header i{
 main{
     height: calc(100% - 50px);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-section{
-    width: 300px;
+    width: 90%;
     height: calc(100% - 50px);
-    background-color: rgba(199, 193, 193, 0.726);
-    border-radius: 12px;
+    background-color: rgba(199, 193, 193, .9);
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease-in-out;
     position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
 .main-hidden{
     opacity:0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.main-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.toggle-link{
+    color: #336b58;
 }
 
 @media (max-width: 988px) {
